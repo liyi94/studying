@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var stringBuffer=(function(){
+				var arr=new Array();
+				return{
+					value:function(){
+						return arr.join(" ");
+					},
+					append:function(val){
+						arr[arr.length]=val;
+					}
+				};
+		}
+		)();
+		document.write("原始字符串："+stringBuffer.value()+"<br/>");
+		stringBuffer.append("hello");
+		stringBuffer.append("world");
+		document.write("添加后的字符串："+stringBuffer.value()+"<br/>");
+	</script>
+</body>
+</html>
